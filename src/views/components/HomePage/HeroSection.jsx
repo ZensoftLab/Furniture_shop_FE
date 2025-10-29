@@ -83,7 +83,7 @@ function HeroSection() {
                         <img
                             src={s.src}
                             alt={s.alt}
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-fit"
                             draggable="false"
                         />
 

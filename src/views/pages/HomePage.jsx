@@ -6,12 +6,13 @@ import Category from "../components/HomePage/Category";
 import PopularChoice from "../components/HomePage/PopularChoice";
 import NewProductList from "../components/HomePage/NewProductList";
 import CustomerReview from "../components/HomePage/CustomerReview";
+import ItemDetailsPage from "./ItemDetailsPage";
 
 function HomePage() {
   return (
     <>
       {/* Keep navbar on top of hero; allow menus to overflow */}
-      <div className="relative z-[60] overflow-visible lg:px-[60px]">
+      <div className="relative z-60 overflow-visible lg:px-[60px]">
         <TopNavbar />
       </div>
 

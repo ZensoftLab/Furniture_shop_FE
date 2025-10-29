@@ -1,6 +1,3 @@
-// CategoryCard.js
-import React from 'react';
-
 function CategoryCard({ category }) {
     return (
         <div

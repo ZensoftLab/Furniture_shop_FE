@@ -72,7 +72,7 @@ function NewProductList() {
                 snap-start shrink-0
                 w-[220px] h-[220px]
                 sm:w-[280px] sm:h-[280px]
-                md:w-[320px] md:h-[320px]
+                md:w-80 md:h-80
                 lg:w-[360px] lg:h-[360px]
               "
                         >
