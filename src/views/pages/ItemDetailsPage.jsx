@@ -9,16 +9,16 @@ const fetchProductData = (productId) => {
         setTimeout(() => {
             resolve({
                 id: productId,
-                name: "Zam Zam Swiss Lawn",
+                name: "CloudSeat",
                 price: 1000,
                 regularPrice: 1200,
                 discountText: "Discount Tk 200",
                 brand: "Non Brand",
                 status: "In stock", // Change this to "Out of stock" to test
                 images: [
-                    "https://api.nirasgallery.com/media/products/IMG-20250917-WA0104.jpg",
-                    "https://api.nirasgallery.com/media/products/IMG-20250917-WA0103.jpg",
-                    "https://api.nirasgallery.com/media/products/IMG-20250917-WA0095.jpg",
+                    "/images/hero-1.jpg",
+                    "/images/hero-2.jpg",
+                    "/images/hero-0.jpg",
                 ],
                 sizes: ["S", "M", "L"],
             });
@@ -237,9 +237,8 @@ function ItemDetailsPage() {
                     </div>
                 </div>
             </div>
-            <div className="lg:px-[60px]">
-                <Footer />
-            </div>
+
+            <Footer />
         </>
     );
 }

@@ -34,7 +34,8 @@ function Category() {
     return (
         <>
             <h1 className="text-center text-5xl font-bold my-8">Collections</h1>
-            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 p-4">
+            {/* <div className="grid grid-cols-2 lg:grid-cols-2 2xl:grid-cols-4 gap-4 p-4 justify-items-center"> */}
+            <div className="grid grid-cols-2 lg:grid-cols-2  2xl:grid-cols-4 gap-4 p-4 justify-items-center">
                 {categoryData.map((category) => (
                     <div
                         key={category.id}

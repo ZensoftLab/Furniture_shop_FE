@@ -28,8 +28,9 @@ function HomePage() {
         <PopularChoice />
         <NewProductList />
         <CustomerReview />
-        <Footer />
+
       </div>
+      <Footer />
     </>
   );
 }

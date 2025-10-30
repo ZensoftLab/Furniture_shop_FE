@@ -1,4 +1,3 @@
-// CustomerReview.jsx
 import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 const reviews = [
@@ -25,7 +24,7 @@ function ReviewCard({ review }, ref) {
             data-review-card
             className="card bg-base-100 shadow-md rounded-xl overflow-hidden hover:shadow-lg transition-all w-[300px] sm:w-[350px] md:w-[400px] shrink-0"
         >
-            <div className="w-full aspect-[4/3] bg-base-200">
+            <div className="w-full aspect-4/3 bg-base-200">
                 <img
                     src={review.productImageUrl}
                     alt={`Product reviewed by ${review.username}`}

@@ -10,8 +10,8 @@ const products = [
     { id: 4, name: "Coffee Table", imageUrl: "/images/card-4.jpg", link: "/p/coffee-table" },
     { id: 5, name: "Lounge Sofa", imageUrl: "/images/hero-1.jpg", link: "/p/lounge-sofa" },
     { id: 6, name: "Task Lamp", imageUrl: "/images/hero-2.jpg", link: "/p/task-lamp" },
-    { id: 7, name: "Bar Stool", imageUrl: "/images/hero-3.jpg", link: "/p/bar-stool" },
-    { id: 8, name: "Dining Set", imageUrl: "/images/hero-4.jpg", link: "/p/dining-set" },
+    { id: 7, name: "Bar Stool", imageUrl: "/images/hero-1.jpg", link: "/p/bar-stool" },
+    { id: 8, name: "Dining Set", imageUrl: "/images/hero-2.jpg", link: "/p/dining-set" },
     { id: 9, name: "Sideboard", imageUrl: "/images/card-2.jpg", link: "/p/sideboard" },
     { id: 10, name: "Patio Chair", imageUrl: "/images/card-3.jpg", link: "/p/patio-chair" },
 ];

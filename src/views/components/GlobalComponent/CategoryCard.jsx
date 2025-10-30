@@ -9,9 +9,9 @@ function CategoryCard({ category }) {
         >
             <a
                 href={category.link}
-                className="absolute inset-0 flex items-center justify-center bg-opacity-50 text-white text-xl font-semibold rounded-lg hover:bg-opacity-70"
+                className="absolute inset-0 flex items-end pb-6 justify-center bg-opacity-50 text-white text-2xl font-semibold rounded-lg hover:bg-opacity-70"
             >
-                <p className="bg-black/30 p-2">{category.name}</p>
+                <p className="bg-black/50 px-5 rounded-full p-2 ">{category.name}</p>
             </a>
         </div>
     );
