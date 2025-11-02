@@ -9,6 +9,8 @@
   
 # Documentation
 
+### [Live Preview](https://furniture-testing-demo.netlify.app/)
+
 #### Home page
 <img src="./ui/homepage.png" height="1000px" />
 
