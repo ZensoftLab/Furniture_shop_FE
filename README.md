@@ -9,4 +9,18 @@ Thank you. :)
 
   
 </div>
-<img src="progress.png"/>
+
+# Documentation
+
+#### Home page
+<img src="./ui/homepage.png" height="1000px" />
+
+#### Item Card
+<img src="./ui/card-design.png" height="300px"/>
+
+#### Item Description
+<img src="./ui/item-description.png" height="500px"/>
+
+#### List of Items Page
+<img src="./ui/item-lists.png" height="1000px"/>
+
