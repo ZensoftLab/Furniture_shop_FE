@@ -1,4 +1,5 @@
 // NewProductList.js
+import { Link, NavLink } from "react-router-dom";
 import React, { useRef, useCallback } from "react";
 import CategoryCard from "../GlobalComponent/CategoryCard";
 
@@ -33,7 +34,15 @@ function NewProductList() {
 
     return (
         <>
-            <h1 className="text-center text-5xl font-bold my-8">New Products <span className="font-normal text-2xl pl-4 text-blue-300">View All</span> </h1>
+            <h1 className="text-center text-5xl font-bold my-8">
+                New Products{" "}
+                <NavLink
+                    to="/view-list"
+                    className="font-normal text-2xl pl-4 text-blue-300 hover:text-blue-500 transition-colors duration-200"
+                >
+                    View All
+                </NavLink>
+            </h1>
 
             <div className="relative w-full px-10">
                 {/* Prev button */}
@@ -76,7 +85,10 @@ function NewProductList() {
                 lg:w-[360px] lg:h-[360px]
               "
                         >
-                            <CategoryCard category={p} />
+                            {/* Make the whole card clickable to /item/:id just like PopularChoice */}
+                            <Link to={`/item/${p.id}`} className="block w-full h-full focus:outline-none">
+                                <CategoryCard category={p} />
+                            </Link>
                         </div>
                     ))}
                 </div>

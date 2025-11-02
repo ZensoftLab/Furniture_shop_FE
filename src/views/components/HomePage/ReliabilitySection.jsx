@@ -1,4 +1,6 @@
-import React from 'react';
+import protection from "../../../assets/protection.png";
+import customerService from "../../../assets/customer-service.png";
+import hand from "../../../assets/hand.png";
 
 function ReliabilitySection() {
     return (
@@ -8,7 +10,7 @@ function ReliabilitySection() {
                 {/* Element 1 */}
                 <div className="p-4 px-16 flex flex-col items-center">
                     <img
-                        src="/public/images/protection.png"
+                        src={protection}
                         alt="Returns & Warranty"
                         className="w-20 h-20 object-contain mb-4"
                     />
@@ -19,7 +21,7 @@ function ReliabilitySection() {
                 {/* Element 2 */}
                 <div className="p-4 px-16 flex flex-col items-center">
                     <img
-                        src="/public/images/customer-service.png"
+                        src={customerService}
                         alt="Customer Support"
                         className="w-20 h-20 object-contain mb-4"
                     />
@@ -30,7 +32,7 @@ function ReliabilitySection() {
                 {/* Element 3 */}
                 <div className="p-4 px-16 flex flex-col items-center">
                     <img
-                        src="/public/images/hand.png"
+                        src={hand}
                         alt="EMI Available"
                         className="w-20 h-20 object-contain mb-4"
                     />

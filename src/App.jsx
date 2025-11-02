@@ -2,8 +2,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './views/pages/HomePage';
 import ItemDetailsPage from './views/pages/ItemDetailsPage';
 import PopularChoice from './views/components/HomePage/PopularChoice';
-import AboutUsPage from './views/pages/AboutUsPage'; // Import the AboutUsPage component
-import ContactUsPage from './views/pages/ContactUsPage'; // Import the ContactUsPage component
+import AboutUsPage from './views/pages/AboutUsPage';
+import ContactUsPage from './views/pages/ContactUsPage';
+import ListPage from './views/pages/ListPage';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         <Route path="/item/:id" element={<ItemDetailsPage />} />
         <Route path="/about-us" element={<AboutUsPage />} />
         <Route path="/contact-us" element={<ContactUsPage />} />
-        
+        <Route path="/view-list" element={<ListPage />} />
       </Routes>
     </BrowserRouter>
   );
