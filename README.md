@@ -1,15 +1,12 @@
 <div align="center">
-  
-#### NOTE: Homepage is not fully completed, a few bugs still in the page, will fix soon...  <br/>
-#### NOTE: After completing the project i will remove the files that are not needed in the github. Until then please do not add/remove anything from the repo.
 
-Thank you. :)
+> ⚠️ **NOTE:** Development in progress...  
+> This project is currently under active development. Features, UI, and code structure may change frequently.
 
-### Progress
-
-  
 </div>
 
+<div align="center">
+  
 # Documentation
 
 #### Home page
@@ -23,4 +20,8 @@ Thank you. :)
 
 #### List of Items Page
 <img src="./ui/item-lists.png" height="1000px"/>
+  
+</div>
+
+
 
