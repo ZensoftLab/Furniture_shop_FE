@@ -1,11 +1,12 @@
 // tailwind.config.js
 module.exports = {
-  // ... other configs
-  plugins: [
-    require("daisyui"), // Add this line
-  ],
-  // daisyUI config (optional)
-  // daisyui: {
-  //   themes: ["light"],
-  // },
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  darkMode: "class", // manual only
+  theme: { extend: {} },
+  plugins: [require("daisyui")],
+  daisyui: {
+    themes: ["light"], // force light
+    darkTheme: "light", // ignore dark requests
+    base: true,
+  },
 };
