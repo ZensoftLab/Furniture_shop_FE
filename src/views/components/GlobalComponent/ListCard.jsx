@@ -2,13 +2,23 @@
 import React, { useState } from "react";
 import { ShoppingCart, Eye } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useCart } from "../Context/CartContext";
 
 export default function ListCard({ item }) {
     const [added, setAdded] = useState(false);
+    const { addItem } = useCart();
 
     const handleAddToCart = (e) => {
         e.stopPropagation();
         e.preventDefault();
+
+        addItem({
+            id: item.id,
+            name: item.name,
+            price: item.price,
+            imageUrl: item.imageUrl,
+        });
+
         setAdded(true);
         setTimeout(() => setAdded(false), 1300);
     };

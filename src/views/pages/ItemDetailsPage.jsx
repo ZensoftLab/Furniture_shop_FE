@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import TopNavbar from "../components/GlobalComponent/TopNavbar";
 import Footer from "../components/GlobalComponent/Footer";
+import { useCart } from "../components/Context/CartContext"; // NEW
 
 // Mock API to simulate fetching product data
 const fetchProductData = (productId) => {
@@ -33,6 +34,7 @@ function ItemDetailsPage() {
     const [product, setProduct] = useState(null);
     const [loading, setLoading] = useState(true); // New loading state
     const [selectedIndex, setSelectedIndex] = useState(0);
+    const { addItem } = useCart(); // NEW
 
     // Fetch the product data when the component mounts
     useEffect(() => {
@@ -47,7 +49,6 @@ function ItemDetailsPage() {
     if (loading) {
         return (
             <div className="p-6 text-black bg-white flex justify-center items-center min-h-screen">
-                {/* Loading spinner */}
                 <div className="text-xl font-semibold text-gray-700">Loading...</div>
             </div>
         );
@@ -194,6 +195,14 @@ function ItemDetailsPage() {
                                 </button>
 
                                 <button
+                                    onClick={() =>
+                                        addItem({
+                                            id: product.id,
+                                            name: product.name,
+                                            price: product.price,
+                                            imageUrl: product.images?.[0] || "/images/placeholder.jpg",
+                                        })
+                                    }
                                     className={`ml-5 h-14 w-56 px-8 rounded-full ${isOutOfStock ? "bg-gray-400" : "bg-black text-white"} text-[16px] inline-flex items-center gap-3 transition-all duration-300 ease-in-out hover:bg-gray-800 focus:outline-none`}
                                     disabled={isOutOfStock}
                                 >

@@ -109,10 +109,8 @@ function AboutUsPage() {
           Contact Us Now
         </Link>
       </div>
+      <Footer />
 
-      <div className="lg:px-[60px]">
-        <Footer />
-      </div>
     </>
   );
 }
