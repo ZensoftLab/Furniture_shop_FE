@@ -6,7 +6,7 @@ import Category from "../components/HomePage/Category";
 import PopularChoice from "../components/HomePage/PopularChoice";
 import NewProductList from "../components/HomePage/NewProductList";
 import CustomerReview from "../components/HomePage/CustomerReview";
-import ItemDetailsPage from "./ItemDetailsPage";
+
 
 function HomePage() {
   return (

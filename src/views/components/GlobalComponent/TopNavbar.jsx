@@ -204,7 +204,7 @@ export default function TopNavbar() {
             View cart
           </Link>
           <Link
-            to="/checkout"
+            to="/payment"
             className="btn group rounded-xl bg-black text-white hover:bg-gray-700 shadow-md hover:shadow-lg active:scale-[0.98] transition"
             onClick={close}
           >

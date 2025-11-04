@@ -8,25 +8,25 @@ const categoryData = [
         id: 1,
         name: "Home Furniture",
         imageUrl: "/images/card-1.jpg",  // Corrected image path
-        link: "/page1",
+        link: "/view-list",
     },
     {
         id: 2,
         name: "Office Furniture",
         imageUrl: "/images/card-2.jpg",  // Corrected image path
-        link: "/page2",
+        link: "/view-list",
     },
     {
         id: 3,
         name: "Academic Furniture",
         imageUrl: "/images/card-3.jpg",  // Corrected image path
-        link: "/page3",
+        link: "/view-list",
     },
     {
         id: 4,
         name: "Restaurant Furniture",
         imageUrl: "/images/card-4.jpg",  // Corrected image path
-        link: "/page4",
+        link: "/view-list",
     },
 ];
 
