@@ -1,4 +1,4 @@
-// ListCard.jsx
+// src/views/components/GlobalComponent/ListCard.jsx
 import React, { useState } from "react";
 import { ShoppingCart, Eye } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -55,7 +55,7 @@ export default function ListCard({ item }) {
                         <span
                             className={`
                 rounded-full px-3 py-1 text-xs font-semibold text-white backdrop-blur
-                ${isHot ? "bg-red-600" : "bg-green-400"}
+                ${isHot ? "bg-red-600" : "bg-green-500"}
               `}
                         >
                             {badge}
@@ -71,36 +71,63 @@ export default function ListCard({ item }) {
                 {/* Gradient overlay */}
                 <div className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-linear-to-t from-black/50 via-black/10 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
-                {/* Hover actions */}
+                {/* Hover actions (responsive, stays in-bounds) */}
                 <div
                     className="
-            absolute inset-x-3 bottom-3
-            flex items-center justify-center gap-3
+            absolute left-3 right-3 bottom-3
+            flex flex-wrap items-center justify-center
+            gap-2 sm:gap-[clamp(8px,1.4vw,14px)]
             opacity-0 translate-y-3
             transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0
           "
                 >
+                    {/* Add to Cart */}
                     <button
                         onClick={handleAddToCart}
                         className="
-              inline-flex items-center gap-2 rounded-xl
-              bg-black hover:bg-gray-700 px-4 py-2 text-sm font-semibold text-white 
-              shadow hover:shadow-md transition
+              inline-flex items-center justify-center gap-2
+              rounded-xl bg-black text-white shadow
+              hover:bg-gray-700 hover:shadow-md active:scale-[0.98] transition
+              w-full sm:w-auto
+              px-[clamp(10px,1.8vw,16px)]
+              py-[clamp(6px,1vw,10px)]
+              text-[clamp(11px,1.7vw,14px)] leading-none
+              min-w-0
             "
+                        aria-label="Add to cart"
                     >
-                        <ShoppingCart className="h-8 w-8" />
-                        Add to Cart
+                        <ShoppingCart
+                            className="
+                h-[clamp(14px,2vw,18px)]
+                w-[clamp(14px,2vw,18px)]
+                shrink-0
+              "
+                        />
+                        <span className="truncate">Add to Cart</span>
                     </button>
 
+                    {/* View details (click-through to parent Link) */}
                     <span
                         className="
-              inline-flex items-center gap-2 rounded-xl
-              bg-red-600 px-4 py-2 text-sm font-semibold text-white
-              shadow hover:bg-red-700 transition
+              inline-flex items-center justify-center gap-2
+              rounded-xl bg-red-600 text-white shadow
+              hover:bg-red-700 transition
+              w-full sm:w-auto
+              px-[clamp(10px,1.8vw,16px)]
+              py-[clamp(6px,1vw,10px)]
+              text-[clamp(11px,1.7vw,14px)] leading-none
+              min-w-0
             "
+                        aria-hidden="true"
                     >
-                        <Eye className="h-8 w-8" />
-                        View details
+                        <Eye
+                            className="
+                h-[clamp(16px,2.2vw,20px)]
+                w-[clamp(16px,2.2vw,20px)]
+                shrink-0
+              "
+                        />
+                        <span className="truncate">View details</span>
                     </span>
                 </div>
             </div>
@@ -110,9 +137,7 @@ export default function ListCard({ item }) {
                 <h3 className="mb-2 line-clamp-1 text-lg font-bold text-gray-900">{item.name}</h3>
                 <div className="flex items-end gap-2">
                     <p className="text-2xl font-bold text-gray-900">৳{item.price}</p>
-                    {priceOld && (
-                        <p className="text-sm text-gray-500 line-through">৳{priceOld}</p>
-                    )}
+                    {priceOld && <p className="text-sm text-gray-500 line-through">৳{priceOld}</p>}
                 </div>
             </div>
 
